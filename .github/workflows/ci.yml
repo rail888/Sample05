@@ -49,3 +49,4 @@ jobs:
     - name: Run deploy script on remote server
       run: |
         ssh -p 35553 -o StrictHostKeyChecking=no tiger@serveo.net "bash ~/sample05/deploy.sh"
+    # 0008
