@@ -23,3 +23,4 @@ public class Sample05Application {
 		SpringApplication.run(Sample05Application.class, args);
 	}
 }
+
