@@ -1,6 +1,8 @@
 package pack;
 
-import java.util.Date;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,11 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class Sample05Application {
 	@GetMapping("/")
 	public String hello(){
-		return "hello 시저" + new Date();
+		// 시간 설정
+		String now = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss"));
+        return "hello 시저 - " + now;
 	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(Sample05Application.class, args);
 	}
-
 }
